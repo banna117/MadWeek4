@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#myCanvas {
+    display: block;
+}
+
+#messageContainer {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    color: white;
+}
+
+#mainMessage {
+    font-size: 64px; /* 더 큰 글씨 크기 설정 */
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#subMessage {
+    font-size: 32px; /* 서브 메시지 크기 설정 */
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    z-index: 9;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+
+#postFadeMessageContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    color: white;
+    z-index: 11;
+}
