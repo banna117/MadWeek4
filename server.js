@@ -13,8 +13,9 @@ mongoose.connect(config.mongodbUri, { useNewUrlParser: true, useUnifiedTopology:
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
+
 //기본 라우터 설정    
-app.get("/", (req, res)=>{
+app.get("/api", (req, res)=>{
     res.send("hello, this is the news server!");
 });
 
