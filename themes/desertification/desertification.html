@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사막화 책 형식 웹페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="turn.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="flipbook">
+            <div class="hard" id="hard1">
+                <div class="container">
+                    <div class="text-black">DE<br/>SERT<br/>IFICA<br/>TION</div>
+                    <div class="text-white">DE<br/>SERT<br/>IFICA<br/>TION</div>
+                    <img class="image" src="./Texture.png" alt="Desertification Image" />
+                </div>
+            </div>
+            <div class="hard" id="hard2"></div>
+            <div class="page" id="page1">
+                <div class="content">
+                    <p id="textPage1" style="font-size:30px;">50%</p>
+                    <button id="startButton1">타이머 시작</button>
+                    <div id="timer1">남은 시간: 10.00</div>
+                    <canvas id="drawingCanvas1" width="300" height="300" style="border:1px solid #000;margin-bottom: 30px;"></canvas>
+                    <button id="checkButton1">그림 확인</button>
+                    
+                    <p id="resultText1"></p>
+                </div>
+            </div>
+            <div class="page" id="page2">
+                <div class="content">
+                    <p>다른 텍스트 내용</p>
+                </div>
+            </div>
+            <div class="page" id="page3">
+                <div class="content">
+                    <p id="textPage3" style="font-size:30px;">75%</p>
+                    <button id="startButton3">타이머 시작</button>
+                    <div id="timer3">10.00</div>
+                    <canvas id="drawingCanvas3" width="300" height="300" style="border:1px solid #000;margin-bottom: 30px;"></canvas>
+                    <button id="checkButton3">그림 확인</button>
+                    
+                    <p id="resultText3"></p>
+                </div>
+            </div>
+            <div class="page" id="page4">
+                <div class="content">
+                    <p>다른 텍스트 내용</p>
+                </div>
+            </div>
+            <div class="page" id="page5">
+                <div class="content">
+                    <p id="textPage5">다른 필요한 텍스트</p>
+                    <input type="text" id="inputPage5" placeholder="조건 입력">
+                    <button id="checkConditionPage5">조건 확인</button>
+                </div>
+            </div>
+            <div class="page" id="page6">
+                <div class="content">
+                    <p>다른 텍스트 내용</p>
+                </div>
+            </div>
+            <div class="hard" id="hard3"></div>
+            <div class="hard" id="hard4">
+                <div class="container">
+                    <div class="text-black">DE<br/>SERT<br/>IFICA<br/>TION</div>
+                    <div class="text-white">DE<br/>SERT<br/>IFICA<br/>TION</div>
+                    <img class="image" src="./Texture.png" alt="Desertification Image" />
+                </div>
+            </div>
+        </div>
+        <img id="tree" src="tree.png" alt="나무 이미지">
+    </div>
+</body>
+</html>

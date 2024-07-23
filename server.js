@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 const {Server} = require('socket.io');
 const http = require('http');
 const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
 
 const express = require('express');
 const app = express();
@@ -18,7 +19,7 @@ const path = require('path');
 app.use(bodyParser.json());
 
 
-mongoose.connect(config.mongodbUri)
+mongoose.connect(config.mongoUri)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
@@ -44,9 +45,9 @@ app.get("/", (req, res)=>{
 
 app.post("/api/login", (req,res)=>{
     const {username, password} = req.body;
-    const user = user.find(u => u.username === username);
+    const user = users.find(u => u.username === username);
 
-    if(user && bcrypt.compareSync(password, user.password)){
+    if(user && bcrypt.compare(password, user.password)){
         const token = jwt.sign({userId:user.id, username: user.username},"secretKey",{expires:"1h"});
             res.json({token});
     }else{
@@ -64,6 +65,6 @@ app.get('/socket.io/socket.io.js', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'login')));
 
-app.listen(port, () =>{
+server.listen(port, () =>{
     console.log(`server is running on ${port}`);
 })

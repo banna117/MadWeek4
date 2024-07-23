@@ -1,9 +1,11 @@
-const crawler = require('./crawler');
 
-// 네이버 뉴스 API 테스트
+const { performCrawling } = require('./crawler');
+
 (async () => {
-    const keyword = '환경'; // 테스트 키워드
-    // const newsItems = await crawler.fetchNaverNews(keyword);
-    const ynaNewsItems = await crawler.performCrawling();
-    console.log(ynaNewsItems);
+    await performCrawling()
+  // 결과 출력
+//   console.log(JSON.stringify(articles, null, 2));
+
+  // 브라우저 종료
+
 })();
