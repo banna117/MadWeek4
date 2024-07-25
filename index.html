@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Main Page</title>
 </head>
 <body>
-    <h1>Main Page</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="themes/desertification/desertification.html">Desertification</a></li>
-            <li><a href="themes/animal/animal.html">animal</a></li>
-            <li><a href="themes/trash/trash.html">Trash</a></li>
-            <li><a href="themes/climate/climate.html">climate</a></li>
-        </ul>
-    </nav>
-    <script src="main.js"></script>
+  <div class="sun"></div>
+  <div class="road"></div>
+  <div class="gray-container"></div>
+  <div class="white-container">
+    <div class="black-bar"></div>
+    <div class="header">
+      <button id="reset-storage" class="reset-button">Reset</button>
+      <div class="large-text">스탬프를 모아보세요</div>
+      <div class="bell-icon hidden"></div> <!-- hidden 클래스 추가 -->
+    </div>
+    <div class="island-container">
+      <div class="circle-wave-1" id="animal-container">
+        <img src="./assets/animal_island.png" alt="Animal Island" class="island-image" id="animal">
+        <div class="circle-wave-2"></div>
+      </div>
+      <div class="circle-wave-1" id="climate-container">
+        <img src="./assets/climate_island.png" alt="Climate Island" class="island-image" id="climate">
+        <div class="circle-wave-2"></div>
+      </div>
+      <div class="circle-wave-1" id="desertification-container">
+        <img src="./assets/desertification_island.png" alt="Desertification Island" class="island-image" id="desertification">
+        <div class="circle-wave-2"></div>
+      </div>
+      <div class="circle-wave-1" id="trash-container">
+        <img src="./assets/trash_island.png" alt="Trash Island" class="island-image" id="trash">
+        <div class="circle-wave-2"></div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+
 </body>
 </html>

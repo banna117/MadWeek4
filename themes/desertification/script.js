@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
     drawingContext3.lineWidth = 10;
     drawingContext5.lineWidth = 10;
 
+    drawingContext1.strokeStyle = '#735b4a';
+    drawingContext3.strokeStyle= '#735b4a';
+    drawingContext5.strokeStyle = '#735b4a';
+
+    
+
     restrictedPages.forEach(page => {
         conditionsMet[page] = false;
     });
@@ -412,6 +418,10 @@ Events.on(engine, 'afterUpdate', () => {
             setTimeout(() => {
                 canvas.style.display = 'none';
                 localStorage.setItem('desertification', 'visited');
+                            // 2초 후 페이지 이동
+            setTimeout(() => {
+                window.location.href = '../../index.html';
+            }, 2000);
             }, 1000); // 1초 후에 황폐화된 땅을 표시
         });
 
