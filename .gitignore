@@ -147,3 +147,4 @@ dist
 .archive/
 .package-lock.json
 .package.json
+.vscode/

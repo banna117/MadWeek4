@@ -9,3 +9,37 @@ body, html {
     display: block;
     background: #7ea6cc; /* 제공된 이미지의 색상 코드 */
 }
+
+#messageContainer {
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    text-align: left;
+    z-index: 10;
+    color: black;
+}
+
+#mainMessage, #subMessage {
+    font-size: 48px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#subMessage {
+    font-size: 24px;
+}
+
+@keyframes flyAway {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.fly-away {
+    animation: flyAway 1s forwards;
+}
