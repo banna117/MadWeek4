@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#climateCanvas {
+    display: block;
+    background-color: #90c9bb;
+}
+
+#bottomBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 122px;
+    background-color: #71706b;
+    z-index: 0; /* 아이콘보다 뒤에 위치하도록 설정 */
+}
+
+.drag-message {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: 10;
+}
+
+.drag-title {
+    font-size: 64px;
+}
+
+.drag-subtitle {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+/* 애니메이션 클래스 */
+.fade-out {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.icons {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center;
+    width: 50%; /* 중앙에 모이도록 폭을 줄임 */
+    left: 25%; /* 중앙에 정렬하기 위해 왼쪽 위치 설정 */
+    z-index: 1; /* Ensures icons are above the bottom bar */
+}
+
+.icon {
+    margin: 0 25px; /* 아이콘 간 간격 조절 */
+    cursor: pointer;
+}
+
+.typhoon-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.flood-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 40px;
+}
+
+.heat-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.snow-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.rainEffect {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    cursor: move;
+}
+
+.heatEffect {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+}
+
+.fireEffect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.raindropEffect {
+    position: absolute;
+    width: 30px; /* 빗방울의 크기 조절 */
+    height: 30px; /* 빗방울의 크기 조절 */
+}
