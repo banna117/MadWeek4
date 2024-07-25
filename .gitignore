@@ -143,8 +143,9 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 ## 프로젝트 설정
-.config/
-.archive/
-.package-lock.json
-.package.json
+
+config/
+archive/
+package-lock.json
+package.json
 .vscode/

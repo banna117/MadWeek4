@@ -103,5 +103,44 @@ const performCrawling = async () => {
     //     console.log('Content:', news.content);
     // });
 
+    const naverNews = await fetchNaverNews(keyword);
+    const combinedNews = [...filteredNews, ...naverNews.map(item => ({
+        title: item.title,
+        url: item.link,
+        content: item.description
+    }))];
 
+    console.log(combinedNews);
+
+    await saveTopNews(combinedNews);
+
+};
+
+const fetchNaverNews = async (query) => {
+    const url = 'https://openapi.naver.com/v1/search/news.json';
+    const options = {
+        headers: {
+            'X-Naver-Client-Id': config.naverClientId,
+            'X-Naver-Client-Secret': config.naverClientSecret
+        },
+        params: {
+            query: query,
+            display: 10,
+            start: 1,
+            sort: 'date'
+        }
+    };
+
+    try {
+        const response = await axios.get(url, options);
+        return response.data.items;
+    } catch (error) {
+        console.error('Error fetching Naver News:', error.message);
+        return [];
+    }
+};
+
+module.exports = {
+    fetchNaverNews,
+    performCrawling
 };
