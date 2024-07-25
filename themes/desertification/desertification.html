@@ -32,68 +32,59 @@
             opacity: 1;
         }
     </style>
-
 </head>
 <body>
     <div id="container">
         <div id="flipbook">
-            <div class="hard" id="hard1">
-                <div class="container">
-                    <div class="text-black">DE<br/>SERT<br/>IFICA<br/>TION</div>
-                    <div class="text-white">DE<br/>SERT<br/>IFICA<br/>TION</div>
-                    <img class="image" src="./Texture.png" alt="Desertification Image" />
-                </div>
-            </div>
-            <div class="hard" id="hard2"></div>
             <div class="page" id="page1">
                 <div class="content">
                     <div class="image-container">
-                        <img class="image" src="./속지배경.jpg" alt="Desertification Image"  />
+                        <div class="image" style="background-color: #c07d5f;"></div>
                         <img class="image-frame" src="./pageframe.png" />
                     </div>
-                    <p id="textPage1" style="font-size:30px;margin-top: 100px;">50%</p>
-                    <div id="timer1" style="margin-bottom: 50px;">10.00</div>
-                    <canvas id="drawingCanvas1" width="300" height="250" style="border:1px solid #000;margin-bottom: 30px;"></canvas>
+                    <p id="textPage1" style="font-size:60px;margin-top: 50px;">50%</p>
+                    <div id="timer1" style="margin-bottom: 20px;">10.00</div>
+                    <canvas id="drawingCanvas1" width="300" height="250" style="border:1px solid #000;margin-bottom: 30px; background-color: #bd9e85;border-radius: 10px;"></canvas>
                 </div>
             </div>
             <div class="opaque-page" id="page2"></div>
             <div class="page" id="page3">
                 <div class="content">
                     <div class="image-container">
-                        <img class="image" src="./속지배경.jpg" alt="Desertification Image"  />
+                        <div class="image" style="background-color: #c07d5f;"></div>
                         <img class="image-frame" src="./pageframe.png" />
                     </div>
-                    <p id="textPage3" style="font-size:30px;margin-top: 100px;">75%</p>
-                    <div id="timer3"style="margin-bottom: 50px;">10.00</div>
-                    <canvas id="drawingCanvas3" width="300" height="250" style="border:1px solid #000;margin-bottom: 30px;"></canvas>
+                    <p id="textPage3" style="font-size:60px;margin-top: 50px;">75%</p>
+                    <div id="timer3"style="margin-bottom: 20px;">10.00</div>
+                    <canvas id="drawingCanvas3" width="300" height="250" style="border:1px solid #000;margin-bottom: 30px;background-color: #bd9e85;border-radius: 10px;"></canvas>
                 </div>
             </div>
             <div class="opaque-page" id="page4"></div>
             <div class="page" id="page5">
                 <div class="content">
                     <div class="image-container">
-                        <img class="image" src="./속지배경.jpg" alt="Desertification Image"  />
+                        <div class="image" style="background-color: #c07d5f;"></div>
                         <img class="image-frame" src="./pageframe.png" />
                     </div>
-                    <p id="textPage5" style="font-size:30px;margin-top: 100px;">90%</p>
-                    <div id="timer5"style="margin-bottom: 50px;">10.00</div>
-                    <canvas id="drawingCanvas5" width="300" height="250" style="border:1px solid #000;margin-bottom: 30px;"></canvas>
+                    <p id="textPage5" style="font-size:60px;margin-top: 50px;">90%</p>
+                    <div id="timer5"style="margin-bottom: 20px;">10.00</div>
+                    <canvas id="drawingCanvas5" width="300" height="250" style="border:1px solid #000;margin-bottom: 30px;background-color: #bd9e85;border-radius: 10px;"></canvas>
                 </div>
             </div>
             <div class="page" id="page6">
             </div>
-            <div class="hard" id="hard3"></div>
+            <!-- <div class="hard" id="hard3"></div>
             <div class="hard" id="hard4">
                 <div class="container">
                     <div class="text-black">DE<br/>SERT<br/>IFICA<br/>TION</div>
                     <div class="text-white">DE<br/>SERT<br/>IFICA<br/>TION</div>
                     <img class="image" src="./Texture.png" alt="Desertification Image" />
                 </div>
-            </div>
+            </div> -->
         </div>
         <canvas id="animationCanvas"></canvas>
 
-        <img id="tree" src="./푸르른나무.png" alt="나무 이미지" style>
+        <img id="tree" src="./tree.png" alt="나무 이미지">
         <!-- <img id="drought" src="./가뭄.png" alt="나무 이미지" style="opacity: 0;"> -->
 
         <div id="message" style="display:none; position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; border-radius: 10px; z-index: 1000;"></div>
