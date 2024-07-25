@@ -21,15 +21,13 @@ body, html {
 #mainMessage {
     font-size: 64px; /* 더 큰 글씨 크기 설정 */
     color: white;
-    opacity: 0;
-    transition: opacity 1s;
+    opacity: 1;
 }
 
 #subMessage {
     font-size: 32px; /* 서브 메시지 크기 설정 */
     color: white;
-    opacity: 0;
-    transition: opacity 1s;
+    opacity: 1;
 }
 
 #fade {
@@ -59,4 +57,23 @@ body, html {
 .fade-messages {
     font-size: 30px; /* 페이드아웃 메시지 글씨 크기 */
     color: white; /* 페이드아웃 메시지 글씨 색상 */
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.pop-animation {
+    animation: pop 0.25s forwards;
 }

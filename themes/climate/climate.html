@@ -3,32 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Page</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-    </style>
+    <title>Climate Crisis Simulation</title>
+    <link rel="stylesheet" href="climate_styles.css">
 </head>
 <body>
-    <h1>Climate Page</h1>
-    <p>여기서 활동을 완료한 후 버튼을 클릭하세요.</p>
-    <button onclick="completeActivity()">Complete Activity</button>
-
-    <script>
-        function completeActivity() {
-            localStorage.setItem('climate', 'visited');
-            location.href = '../../index.html';
-        }
-    </script>
+    <canvas id="climateCanvas"></canvas>
+    <div id="dragMessage" class="drag-message">
+        <div class="drag-title">DRAG!</div>
+        <div class="drag-subtitle">and what..?</div>
+    </div>
+    <div id="bottomBar"></div>
+    <div class="icons">
+        <img src="../../assets/typhoon_icon.png" alt="Typhoon" class="icon typhoon-icon" id="typhoon">
+        <img src="../../assets/raindrop_2.png" alt="Flood" class="icon flood-icon" id="flood" draggable="true">
+        <img src="../../assets/sun.png" alt="Heat" class="icon heat-icon" id="heat">
+        <img src="../../assets/snow_icon.png" alt="Snow" class="icon snow-icon" id="snow">
+    </div>
+    <script src="climate.js"></script>
+    <script src="typhoon.js"></script>
+    <script src="flood.js"></script>
+    <script src="heat.js"></script>
+    <script src="snow.js"></script>
 </body>
 </html>
